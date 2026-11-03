@@ -1,0 +1,110 @@
+# Alaybeyoğlu Hukuk Bürosu — Pages CMS yönetim paneli
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  rename: safe
+  categories:
+  - image
+  - document
+content:
+- name: makaleler
+  label: Makaleler
+  type: collection
+  path: content/makaleler
+  format: json
+  filename: '{primary}.json'
+  view:
+    primary: title
+    fields:
+    - title
+    - date
+    - category
+    - published
+    sort: date
+    order: desc
+  fields:
+  - name: title
+    label: Makale başlığı
+    type: string
+    required: true
+  - name: date
+    label: Yayın tarihi
+    type: date
+    required: true
+  - name: category
+    label: Kategori
+    type: select
+    required: true
+    options:
+      values:
+      - İş Hukuku
+      - Aile Hukuku
+      - Miras Hukuku
+      - Gayrimenkul Hukuku
+      - Borçlar Hukuku
+      - İcra ve İflas Hukuku
+      - Şirketler Hukuku
+      - Genel / Diğer
+  - name: author
+    label: Yazar
+    type: select
+    required: true
+    options:
+      values:
+      - Av. Berat Büşra Alaybeyoğlu
+      - Av. Selahattin Yiğit Alaybeyoğlu
+      - Alaybeyoğlu Hukuk Bürosu
+  - name: summary
+    label: Kısa özet
+    type: text
+    required: true
+  - name: published
+    label: Yayımla (taslak ise kapalı bırakın)
+    type: boolean
+    description: İlk kez oluştururken kapalı bırakın. Yayına alındığında herkes görebilir.
+  - name: body
+    label: Makale metni
+    type: rich-text
+    required: true
+    options:
+      format: markdown
+      switcher: true
+- name: site
+  label: Büro bilgileri
+  type: file
+  path: content/site.json
+  format: json
+  fields:
+  - name: intro
+    label: Anasayfa giriş metni
+    type: text
+  - name: about
+    label: Hakkımızda yazısı
+    type: text
+  - name: lawyer_1
+    label: Birinci avukat adı
+    type: string
+  - name: lawyer_2
+    label: İkinci avukat adı
+    type: string
+  - name: phone
+    label: Telefon
+    type: string
+  - name: email
+    label: E-posta
+    type: string
+  - name: address
+    label: Açık adres
+    type: text
+  - name: map_url
+    label: Google Maps bağlantısı (isteğe bağlı)
+    type: string
+  - name: instagram
+    label: Instagram kullanıcı adı
+    type: string
+  - name: lawyer_1_education
+    label: Birinci avukat eğitim bilgisi
+    type: string
+  - name: lawyer_2_education
+    label: İkinci avukat eğitim bilgisi
+    type: string

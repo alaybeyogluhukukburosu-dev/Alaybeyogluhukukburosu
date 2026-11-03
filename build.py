@@ -119,6 +119,23 @@ if map_url.startswith('https://'): rows.append(f'<a class="text-link" href="{h(m
 contact=f'''{page_heading('İletişim','İletişim','Alaybeyoğlu Hukuk Bürosu iletişim ve adres bilgileri.')}<section class="section-spacing"><div class="container contact-main"><div><span class="eyebrow">İLETİŞİM BİLGİLERİ</span><h2>Bir sorunuz mu var?</h2><p>Büromuzla iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz.</p><div class="contact-details">{''.join(rows)}</div></div><div class="contact-art" aria-label="Alaybeyoğlu Hukuk Bürosu logosu"><img src="/assets/monogram.webp" alt=""/><span>ALAYBEYOĞLU</span><small>HUKUK BÜROSU</small><div class="contact-art-location">İSTANBUL · ANADOLU YAKASI</div></div></div></section>'''
 write('iletisim/index.html',layout('İletişim','Alaybeyoğlu Hukuk Bürosu iletişim bilgileri.', '/iletisim/',contact))
 
-write('robots.txt','User-agent: *\nAllow: /\n')
+# Google Search Console için site haritası: ana sayfalar ve yayındaki tüm makaleler.
+# Yeni makale yayımlandığında dosya otomatik güncellenir.
+from xml.sax.saxutils import escape as xml_escape
+site_url = 'https://alaybeyogluhukukburosu.netlify.app'
+index_files = sorted(DIST.rglob('index.html'))
+url_paths = []
+for index_file in index_files:
+    relative = index_file.parent.relative_to(DIST)
+    path = '/' if str(relative) == '.' else '/' + relative.as_posix() + '/'
+    url_paths.append(path)
+url_paths.sort(key=lambda path: (path != '/', path))
+sitemap_xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+sitemap_xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+for path in url_paths:
+    sitemap_xml += '  <url><loc>' + xml_escape(site_url + path) + '</loc></url>\n'
+sitemap_xml += '</urlset>\n'
+write('sitemap.xml', sitemap_xml)
+write('robots.txt', 'User-agent: *\nAllow: /\nSitemap: ' + site_url + '/sitemap.xml\n')
 write('_headers','/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n')
 print('Site başarıyla hazırlandı:',len(posts),'yayımlanmış makale,',len(list(DIST.rglob('index.html'))),'sayfa')

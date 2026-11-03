@@ -43,7 +43,7 @@ def footer():
 
 def layout(title, desc, active, body):
     title_tag = f'{h(title)} | Alaybeyoğlu Hukuk Bürosu' if title != 'Anasayfa' else 'Alaybeyoğlu Hukuk Bürosu'
-    return f'''<!doctype html><html lang="tr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#f9f7f2"/><meta name="description" content="{h(desc)}"/><title>{title_tag}</title><link rel="icon" href="/assets/favicon.png" type="image/png"/><link rel="stylesheet" href="/assets/site.css"/><script defer src="/assets/site.js"></script></head><body>{nav(active)}<main id="main">{body}</main>{footer()}</body></html>'''
+    return f'''<!doctype html><html lang="tr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#f7f7f3"/><meta name="description" content="{h(desc)}"/><title>{title_tag}</title><link rel="icon" href="/assets/favicon.png" type="image/png"/><link rel="stylesheet" href="/assets/site.css"/><script defer src="/assets/site.js"></script></head><body>{nav(active)}<main id="main">{body}</main>{footer()}</body></html>'''
 
 def page_heading(section, title, intro):
     return f'''<section class="page-heading"><div class="container"><div class="crumb"><a href="/">Ana Sayfa</a><span>/</span><span>{h(section)}</span></div><span class="eyebrow">ALAYBEYOĞLU HUKUK BÜROSU</span><h1>{title}</h1><p>{intro}</p></div></section>'''
@@ -67,6 +67,10 @@ posts.sort(key=lambda a: a.get('date',''), reverse=True)
 if DIST.exists(): shutil.rmtree(DIST)
 DIST.mkdir()
 shutil.copytree(ROOT/'assets', DIST/'assets')
+# Google Search Console HTML doğrulama dosyalarını sitede kök dizine kopyala.
+# Bu dosyalar GitHub deposunun köküne yüklenmelidir.
+for verification_file in ROOT.glob('google*.html'):
+    shutil.copy2(verification_file, DIST / verification_file.name)
 
 latest=''.join(article_card(p) for p in posts[:3]) if posts else '<div class="empty-state"><span class="empty-symbol">✦</span><h3>Makalelerimiz</h3><p>Hukuki değerlendirmeler ve mesleki yazılar bu bölümde yayımlanacaktır.</p><a href="/makaleler/" class="text-link">Makaleler sayfası <span>↗</span></a></div>'
 

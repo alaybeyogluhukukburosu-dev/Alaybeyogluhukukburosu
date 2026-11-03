@@ -4,3 +4,63 @@
 @media(max-width:400px){.brand-text strong{letter-spacing:.11em;font-size:12px}.brand-text small{letter-spacing:.25em}.hero-actions{gap:16px;flex-wrap:wrap}.solid-btn{padding:13px 16px;gap:18px}.hero h1{font-size:39px}.section-head{align-items:flex-start;flex-direction:column;gap:15px}.footer-brand strong{font-size:16px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 [hidden]{display:none!important}
+
+
+/* Onaylanan kurumsal renkler — 03.11.2026
+   Bu katman sadece renkleri düzenler; logo dosyası, yerleşim ve metinler aynen korunur. */
+:root {
+  --bg: #F7F6F2;
+  --paper: #FDFCFA;
+  --dark: #242623;
+  --taupe: #9B7C4C;
+  --taupe-deep: #82673F;
+  --sage: #173D31;
+  --sage-deep: #10382B;
+  --sage-light: #EEEFEA;
+  --stroke: #D9D3C9;
+  --muted: #62635F;
+  --shade: #F3F1ED;
+}
+body { background: var(--bg); color: var(--dark); }
+.site-header { background: rgba(247,246,242,.97); border-bottom: 1px solid #D9D3C9; }
+.brand-text small, .footer-brand span { color: #836C50; }
+.nav-link { color: #30322F; }
+.nav-link:hover, .nav-link.is-active { color: #163C30; }
+.nav-link.is-active::after { background: #9B7C4C; }
+.eyebrow, .hero-overline, .hero-footnote, .contact-art-location { color: #234637; }
+.hairline { background: #AE8F59; }
+h1 em, h2 em { color: #9B7C4C; }
+.hero { background: #F7F6F2; }
+.hero-copy > p, .intro-side p, .page-heading p { color: #585B56; }
+.solid-btn { background: #133B2D; color: #FBF9F5; }
+.solid-btn:hover { background: #0A2F23; }
+.underlined-link, .text-link { border-bottom-color: #AE8F59; }
+.hero-art { background: #FAF9F6; box-shadow: none; }
+.hero-art::before, .hero-art::after { display: none; }
+.art-lines { border-color: rgba(128,112,86,.19); }
+.hero-logo { filter: none; }
+.hero-art-caption { color: #57554E; }
+.intro-section, .articles-section { background: var(--paper); }
+.practice-section { background: #F7F6F2; }
+.practice-item:hover { background: #EFEFE9; }
+.practice-item > span:first-child, .practice-item > span:last-child, .empty-symbol { color: #9B7C4C; }
+.article-card, .empty-state, .no-posts { background: #F8F7F3; }
+.article-top, .article-bottom a { color: #315444; }
+.contact-banner { background: #143B2C; color: #F9F8F4; }
+.contact-banner .eyebrow { color: #C9AD78; }
+.light-btn { border: 1px solid #B39255; color: #F9F8F4; }
+.light-btn:hover { background: rgba(201,173,120,.14); }
+.footer { background: #EFEDE7; }
+.footer-bottom { border-top-color: #D9D3C9; }
+.page-heading, .article-hero { background: #F1F0EA; }
+.team-section { background: #F1F0EA; }
+.team-avatar { background: #E7E5DE; color: #846E51; }
+.filter.active, .filter:hover { background: #143B2C; border-color: #143B2C; }
+.search-box { border-bottom-color: #AE8F59; }
+.contact-art { background: #FAF9F6; }
+.contact-art::before { border-color: rgba(128,112,86,.2); }
+.contact-art > small { color: #82673F; }
+.contact-row span { color: #82673F; }
+@media (max-width: 760px) {
+  .site-nav { background: #F7F6F2; }
+}

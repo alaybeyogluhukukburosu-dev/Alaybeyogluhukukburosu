@@ -119,8 +119,9 @@ instagram=SITE.get('instagram','').strip().lstrip('@')
 if instagram: rows.append(f'<div class="contact-row"><span>INSTAGRAM</span><a href="https://www.instagram.com/{h(instagram)}/" target="_blank" rel="noopener noreferrer">@{h(instagram)}</a></div>')
 if addr: rows.append(f'<div class="contact-row"><span>ADRES</span><strong>{h(addr)}</strong></div>')
 if not rows: rows.append('<div class="contact-pending">Telefon, e-posta ve açık adres bilgileri yayına alınmadan önce eklenecek.</div>')
-# Google Haritalar bağlantıları; adres ile arama yapılır, işletme Place ID onaylanınca güncellenebilir.
-location_query = 'Kozyatağı Mahallesi, Abdülezelpaşa Sokak No:5, 34742 Kadıköy, İstanbul'
+# Kullanıcının Apple Haritalar'da doğrudan işaretlediği büro konumu.
+# Metin adresinden yer aratmak yerine enlem/boylam kullanılarak yanlış sokak eşleşmesi önlenir.
+location_query = '40.965289,29.096033'
 encoded_location = quote(location_query, safe='')
 map_search = 'https://www.google.com/maps/search/?api=1&query=' + encoded_location
 map_directions = 'https://www.google.com/maps/dir/?api=1&destination=' + encoded_location

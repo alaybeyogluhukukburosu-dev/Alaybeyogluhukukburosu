@@ -1,13 +1,15 @@
 {
   "intro": "Alaybeyoğlu Hukuk Bürosu, hukuki meselelerin değerlendirilmesinde mesleki özen ve sorumluluk ilkelerini esas alır.",
-  "about": "İstanbul Anadolu Yakası'nda faaliyet gösteren Alaybeyoğlu Hukuk Bürosu, hukuki çalışmalarını yürürlükteki mevzuat ve meslek kuralları çerçevesinde sürdürmektedir.",
-  "lawyer_1": "Av. Berat Büşra Alaybeyoğlu",
-  "lawyer_2": "Av. Selahattin Yiğit Alaybeyoğlu",
+  "about": "Alaybeyoğlu Hukuk Bürosu, İstanbul Kozyatağı'nda hukuki danışmanlık ve uyuşmazlıkların çözümü alanlarında faaliyet göstermektedir.\n\nBüromuz; şirketler ve ticaret hukuku, iş hukuku, aile hukuku, miras hukuku, gayrimenkul ve kira hukuku, borçlar hukuku, icra ve iflas hukuku ile ceza hukuku alanlarında çalışmalar yürütmektedir.\n\nHukuki süreçlerin her birinin kendine özgü koşullarını gözeterek mesleki etik ilkeler çerçevesinde faaliyetlerini sürdürmektedir.",
+  "lawyer_1": "Av. Selahattin Yiğit Alaybeyoğlu",
+  "lawyer_2": "Av. Berat Büşra Alaybeyoğlu",
   "phone": "0530 040 49 23",
   "email": "alaybeyogluhukukburosu@gmail.com",
   "address": "Kozyatağı Mahallesi, Abdülezelpaşa Sokak, Ezel Apartmanı, No: 5, Kat: 10, Daire: 20, Kadıköy / İstanbul",
-  "map_url": "https://www.google.com/maps/search/?api=1&query=Kozyata%C4%9F%C4%B1%20Mahallesi%20Abd%C3%BClezelpa%C5%9Fa%20Sokak%20Ezel%20Apartman%C4%B1%20No%205%20Kad%C4%B1k%C3%B6y%20%C4%B0stanbul",
-  "lawyer_1_education": "Kadir Has Üniversitesi Hukuk Fakültesi · 2015",
-  "lawyer_2_education": "Yeditepe Üniversitesi Hukuk Fakültesi · 2011",
-  "instagram": "alaybeyogluhukuk"
+  "map_url": "https://www.google.com/maps/search/?api=1&query=Kozyata%C4%9F%C4%B1%20Mahallesi%2C%20Abd%C3%BClezelpa%C5%9Fa%20Sokak%20No%3A5%2C%2034742%20Kad%C4%B1k%C3%B6y%2C%20%C4%B0stanbul",
+  "lawyer_1_education": "Yeditepe Üniversitesi Hukuk Fakültesi · 2011",
+  "lawyer_2_education": "Kadir Has Üniversitesi Hukuk Fakültesi · 2015",
+  "instagram": "alaybeyogluhukuk",
+  "lawyer_1_bio": "2011 yılında Yeditepe Üniversitesi Hukuk Fakültesinden mezun olmuştur.\n\nMezuniyetinin ardından butik bir hukuk bürosunda 10 yılı aşkın süre yönetici avukat olarak görev yapmış ve 2023 yılında Alaybeyoğlu Hukuk Bürosu'nu kurmuştur.\n\nMesleki çalışmalarını şirketler hukuku ve ticari uyuşmazlıklar ağırlıklı olmak üzere hukukun farklı alanlarında sürdürmektedir.",
+  "lawyer_2_bio": "2015 yılında Kadir Has Üniversitesi Hukuk Fakültesinden mezun olmuştur.\n\nMeslek hayatına farklı hukuk bürolarında çalışarak başlamış, iki ayrı hukuk bürosunda edindiği deneyimin ardından mesleki faaliyetlerini Alaybeyoğlu Hukuk Bürosu bünyesinde sürdürmeye başlamıştır.\n\nMesleki çalışmalarında aile hukuku ve kira uyuşmazlıkları ağırlıklı olmak üzere hukukun farklı alanlarında faaliyet göstermektedir."
 }

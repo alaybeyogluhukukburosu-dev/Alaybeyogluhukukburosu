@@ -64,3 +64,39 @@ h1 em, h2 em { color: #9B7C4C; }
 @media (max-width: 760px) {
   .site-nav { background: #F7F6F2; }
 }
+
+
+/* 04.11.2026 — Onaylanan içerik ve yerleşim düzenlemeleri */
+/* Logo görsel dosyası değiştirilmez; sadece çevresinde nefes alanı açılır. */
+.hero-logo { width: min(72%, 450px); max-width: calc(100% - 92px); margin-inline: auto; }
+.hero-art { background: #FAF9F6; }
+
+/* Avukat fotoğrafları daha sonra eklenebilir: şimdilik sade kartlar. */
+.team-grid { gap: 28px; align-items: stretch; }
+.team-card { padding: 0; min-height: 0; display: flex; flex-direction: column; overflow: hidden; background: var(--paper); }
+.team-photo-placeholder { height: 175px; display: grid; place-items: center; background: #EDEBE6; border-bottom: 1px solid var(--stroke); }
+.team-initials { font: 400 39px/1 var(--serif); letter-spacing: .14em; color: #9B7C4C; }
+.team-card-content { display: flex; flex-direction: column; padding: 30px 34px 38px; flex: 1; }
+.team-card .team-number { color: #82673F; display: block; margin-bottom: 19px; }
+.team-card h3 { font-size: clamp(26px, 2.7vw, 34px); line-height: 1.22; margin: 0 0 24px; }
+.team-bio { border-top: 1px solid var(--stroke); padding-top: 22px; font: 14px/1.9 var(--sans); color: #545952; }
+.team-bio p { color: inherit; margin: 0 0 17px; letter-spacing: normal; font-size: inherit; }
+.team-bio p:last-child { margin-bottom: 0; }
+.about-description p { line-height: 2; }
+.about-description p:first-child { font-size: 17px; color: #343B35; }
+
+/* Google Haritalar, iki gerçek bağlantıyla birlikte iletişim sayfasında. */
+.contact-main { grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; }
+.contact-map-column > h2 { margin-bottom: 25px; }
+.location-map { border: 1px solid var(--stroke); background: #EDEBE6; }
+.location-map iframe { display: block; width: 100%; height: 390px; border: 0; }
+.map-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 20px 24px; border-top: 1px solid var(--stroke); background: var(--paper); }
+.map-actions a { font-size: 12px; color: #133B2D; border-bottom: 1px solid #9B7C4C; padding-bottom: 4px; }
+.map-actions a:hover { color: #9B7C4C; }
+@media (max-width: 760px) {
+  .hero-logo { width: min(76%, 365px); max-width: calc(100% - 68px); }
+  .team-photo-placeholder { height: 150px; }
+  .team-card-content { padding: 28px 26px 34px; }
+  .contact-main { grid-template-columns: 1fr; gap: 56px; }
+  .location-map iframe { height: 325px; }
+}
